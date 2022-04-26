@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+<link rel="stylesheet" href="bluestyle.css">
+</head>
+<body>
+<label>Full Name</label>
+<input type="text" id="name" name="full name" placeholder="Full name">
+<!-- <input type="text" id="number" name="phone number" placeholder=" phonenumber"> --> -->
+<!-- <input type="text" id="email"> -->
+<button onclick="myclick()">submit</button>
+<script>
+    function myclick()
+    {
+         var fullname = document.getElementById("name").value;
+        // var phonenumber = document.getElementById("number").value;
+        // var email = document.getElementById("email").value;
+        // var emailpattern = /\S+@\S+\.com|edu/;
+        var pattern = /^(?!\s)[0-9a-zA-Z_\s-]*$/;
+        var pattern1 = /^(?!\s)M[r|rs|s]*\s[a-zA-Z\s_]*$/
+        // var phone = /^[+]?[0-9]{2}[-]?[0-9]{10}$/g;
+        // var numbertest = phonenumber.match(phone);
+        var test = fullname.match(pattern1);
+        // var emailtest = email.match(emailpattern);
+         console.log(test);
+        // console.log(numbertest);
+        // console.log(emailtest);
+        if(test )
+        {
+            console.log(fullname);  
+            // console.log(phonenumber);  
+            // console.log(emailtest);
+        }
+        else
+        {
+            console.log("This is "+fullname);
+            // console.log("This is "+phonenumber);
+            // console.log("this is not "+emailtest);
+        }
+       ///^\s|s+$/
+    }
+    
+</script>
+</body>
+</html>
